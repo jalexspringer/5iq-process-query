@@ -56,7 +56,7 @@ def run_prt(wb, prospect, comp1, comp2):
     adv_count_string = adv_count(prospect, comp1, comp2, wb)
     print(top_publishers)
     print(adv_count_string)
-    new_file.write(adv_count_string  + "\n \n Top 30 Publishers Linking to Competitors: \n" + top_publishers)
+    new_file.write(adv_count_string  + "\n \nTop 30 Publishers Linking to Competitors: \n" + top_publishers)
     new_file.close()
     os.system("vim "+new_name)
 

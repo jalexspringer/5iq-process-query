@@ -49,14 +49,12 @@ def top_pubs(wb, prospect):
 def run_prt(wb, prospect, comp1, comp2):
     import os
     import sys
-    new_name = prospect + ".txt"
+    new_name = "{0}.txt".format(prospect)
     new_file = open(new_name, 'w')
     wb = read_clean(wb)
     top_publishers = top_pubs(wb, prospect)
     adv_count_string = adv_count(prospect, comp1, comp2, wb)
-    print(top_publishers)
-    print(adv_count_string)
-    new_file.write(adv_count_string  + "\n \nTop 30 Publishers Linking to Competitors: \n" + top_publishers)
+    new_file.write("{0}\n \nTop Publishers Linking to Competitors:\n{1}".format(adv_count_string, top_publishers))
     new_file.close()
     os.system("vim "+new_name)
 

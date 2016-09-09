@@ -56,6 +56,6 @@ def run_prt(wb, prospect, comp1, comp2):
     adv_count_string = adv_count(prospect, comp1, comp2, wb)
     new_file.write("{0}\n \nTop Publishers Linking to Competitors:\n{1}".format(adv_count_string, top_publishers))
     new_file.close()
-    os.system("vim "+new_name)
+    os.system("gedit "+new_name)
 
 
